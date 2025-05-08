@@ -11,6 +11,6 @@
         kb_layout = "us";
         kb_variant = "dvorak";
       };
-    }
+    };
   };
 }
