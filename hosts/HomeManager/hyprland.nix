@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 
 {
-  wayland.windowManagers.hyprland = {
+  wayland.windowManager.hyprland = {
     # Allows HomeManger to manage Hyprland
     enable = true;
     xwayland.enable = true;
