@@ -1,12 +1,9 @@
 { config, pkgs, ...}:
 
 {
-  {
-    programs.hyprland = {
-      enable = true;
-      nvidiaPatches = true;
-      xwayland.enable = true;
-    }
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
   };
 
   environment.sessionVariables = {

@@ -11,7 +11,7 @@
       # Seperate Apps file
       ./apps.nix
       # Enabling Hyprland
-      #./hyprland.nix
+      ./hyprland.nix
       # Home Manager 
       inputs.home-manager.nixosModules.default
     ];
