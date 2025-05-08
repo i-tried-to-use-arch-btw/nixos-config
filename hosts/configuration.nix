@@ -8,7 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      # Seperate Apps file
       ./apps.nix
+      # Enabling Hyprland
+      #./hyprland.nix
+      # Home Manager 
       inputs.home-manager.nixosModules.default
     ];
 
