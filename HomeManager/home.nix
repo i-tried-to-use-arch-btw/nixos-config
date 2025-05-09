@@ -13,6 +13,7 @@
     ./git.nix
     ./zsh.nix
     ./NeoVim/config/default.nix
+    ./kitty.nix
     nixvim.homeManagerModules.nixvim
   ];
 
