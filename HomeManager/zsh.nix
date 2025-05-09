@@ -4,12 +4,15 @@
     # Allow Home manager to manage Zsh
     enable = true;
     shellAliases = {
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch --flake /home/me/nixos-config/hosts#nixos";
+      home-update = "home-manager switch --flake /home/me/nixos-config/HomeManager#me";
     };
-  };
-  oh-my-zsh = {
-    enable = true;
-    plugins = [ ];
-    theme = "agnoster";
+    oh-my-zsh = {
+       enable = true;
+       plugins = [
+         "git"  # Example: Add a plugin like git
+       ];
+       theme = "agnoster"; # Example: Choose a theme
+     };
   };
 }

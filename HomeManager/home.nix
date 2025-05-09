@@ -12,8 +12,8 @@
     ./zsh.nix
   ];
 
-  home.packages = [
-    pkgs.oh-my-zsh
+  home.packages = with pkgs; [
+    fzf
   ];
 
   home.file = {};
