@@ -6,6 +6,7 @@
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake /home/me/nixos-config/hosts#nixos";
       home-update = "home-manager switch --flake /home/me/nixos-config/HomeManager#me";
+      neovim = "nix run ../NeoVim#nixos";
     };
     oh-my-zsh = {
        enable = true;
