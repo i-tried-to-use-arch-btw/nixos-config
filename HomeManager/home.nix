@@ -1,8 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixvim, ... }:
 
 {
   home.username = "me";
   home.homeDirectory = "/home/me";
+  programs.nixvim.enable = true;
+
   
   # Imports
 
@@ -10,6 +12,8 @@
     ./Hyprland/hyprland.nix
     ./git.nix
     ./zsh.nix
+    ./NeoVim/config/default.nix
+    nixvim.homeManagerModules.nixvim
   ];
 
   fonts.fontconfig.enable = true;
