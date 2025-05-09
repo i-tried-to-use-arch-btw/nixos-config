@@ -14,6 +14,7 @@
      tor-browser
      vscode
      zsh
+     home-manager
   ];
   # Install firefox.
   programs.firefox.enable = true;
