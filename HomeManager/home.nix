@@ -7,8 +7,12 @@
   # Imports
 
   imports = [
+    # Hyprland
     ./Hyprland/hyprland.nix
+    # Git
     ./git.nix
+    # NeoVim / NVF
+    ./NeoVim/nvf-configuration.nix
   ];
 
   home.packages = [];
