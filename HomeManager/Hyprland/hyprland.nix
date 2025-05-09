@@ -6,6 +6,10 @@
 
     settings = {
       "$mainMod" = "SUPER";
+      input = {
+        kb_layout = "us";
+        kb_variant = "dvorak";
+      };
 
       bind = [
         # Launch applications
@@ -16,8 +20,7 @@
         # Window management
         "$mainMod, F, fullscreen"
         "$mainMod, P, togglesplit"
-        "$mainMod SHIFT, P, togglepseudotile"
-        "$mainMod SHIFT, SPACE, togglefloating"
+        "$mainMod , SPACE, togglefloating"
         "$mainMod, R, submap, resize"
 
         # Workspace switching
