@@ -12,8 +12,11 @@
     ./zsh.nix
   ];
 
+  fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     fzf
+    nerd-fonts.jetbrains-mono
   ];
 
   home.file = {};
