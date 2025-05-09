@@ -12,8 +12,6 @@
       ./apps.nix
       # Enabling Hyprland
       ./hyprland.nix
-      # Home Manager 
-      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader.
@@ -103,13 +101,6 @@
     packages = with pkgs; [
     #  thunderbird
     ];
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "me" = import ./home.nix;
-    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
