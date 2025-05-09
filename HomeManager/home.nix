@@ -8,6 +8,7 @@
 
   imports = [
     ./Hyprland/hyprland.nix
+    ./git.nix
   ];
 
   home.packages = [];
