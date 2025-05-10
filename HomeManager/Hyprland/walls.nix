@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = [
-        "swaybg -i ../../Walls/gruvbox-nix.jpg -m fill"
+        "swaybg -i /home/me/nixos-config/Walls/gruvbox-nix.jpg -m fill"
       ];
     };
   };

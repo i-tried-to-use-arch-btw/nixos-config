@@ -79,6 +79,7 @@
   };
   imports = [
     ./walls.nix
+    ./trash.nix
   ];
 }
 
