@@ -1,10 +1,9 @@
-{ config, pkgs, nixvim, ... }:
+{ config, pkgs, nixvim, inputs, ... }:
 
 {
   home.username = "me";
   home.homeDirectory = "/home/me";
   programs.nixvim.enable = true;
-
   
   # Imports
 
@@ -27,11 +26,17 @@
     alsa-utils
     swww
     tmux
+    inputs.ags.packages.${pkgs.system}.default
   ];
 
   home.file = {};
 
   home.sessionVariables = {};
+  
+  home.sessionPath = [
+    "$HOME/.local/bin"
+  ];
+
 
   programs.home-manager.enable = true;
 

@@ -13,9 +13,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ags.url = "github:aylur/ags";
+    ags.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }:
+  outputs = { nixpkgs, home-manager, nixvim, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -27,7 +29,7 @@
           ./home.nix
         ];
 
-        extraSpecialArgs = { inherit nixvim; }; # make nixvim available in home.nix
+        extraSpecialArgs = { inherit nixvim inputs; }; # make nixvim available in home.nix
       };
     };
 }
