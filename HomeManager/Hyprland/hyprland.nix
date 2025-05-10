@@ -80,6 +80,7 @@
   imports = [
     ./walls.nix
     ./trash.nix
+    ./windowrules.nix
   ];
 }
 
