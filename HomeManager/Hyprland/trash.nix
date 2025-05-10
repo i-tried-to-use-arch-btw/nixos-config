@@ -3,8 +3,8 @@
 {
   wayland.windowManager.hyprland = {
     settings = {
-      env = XCURSOR_SIZE,24;
-      env = HYPRCURSOR_SIZE,24;
+      env = "XCURSOR_SIZE,24";
+      env = "HYPRCURSOR_SIZE,24";
     };
   };
 }
