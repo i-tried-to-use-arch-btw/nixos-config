@@ -9,13 +9,22 @@
       input = {
         kb_layout = "us";
         kb_variant = "dvorak";
+        kb_options = "grp:alt_shift_toggle";
       };
-
       bind = [
         # Launch applications
-        "$mainMod, T, exec, kitty"
-        "$mainMod, W, exec, wofi"
+        "$mainMod, Y, exec, kitty"
+        "$mainMod, W, exec, wofi --show drun"
         "$mainMod, Q, killactive"
+
+        # Brightness
+        "ALT, F2, exec, brightnessctl s 5%-"
+        "ALT, F3, exec, brightnessctl s 5%+"
+
+        # Audio
+        "ALT, F5, exec, amixer -D pipewire toggle Master"
+        "ALT, F6, exec, amixer -D pipewire sset Master 5%-"
+        "ALT, F7, exec, amixer -D pipewire sset Master 5%+"
 
         # Window management
         "$mainMod, F, fullscreen"
@@ -58,15 +67,18 @@
       submap = {
         resize = {
           binde = [
-            ", right, resizeactive, 10 0"
-            ", left, resizeactive, -10 0"
-            ", up, resizeactive, 0 -10"
-            ", down, resizeactive, 0 10"
-            ", escape, submap, reset"
+            "$mainMod, right, resizeactive, 10 0"
+            "$mainMod, left, resizeactive, -10 0"
+            "$mainMod, up, resizeactive, 0 -10"
+            "$mainMod, down, resizeactive, 0 10"
+            "$mainMod, escape, submap, reset"
           ];
         };
       };
     };
   };
+  imports = [
+    ./walls.nix
+  ];
 }
 

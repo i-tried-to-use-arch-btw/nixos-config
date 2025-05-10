@@ -14,6 +14,7 @@
      vscode
      zsh
      home-manager
+     tree
   ];
   # Install firefox.
   programs.firefox.enable = true;

@@ -22,6 +22,9 @@
   home.packages = with pkgs; [
     fzf
     nerd-fonts.jetbrains-mono
+    brightnessctl
+    alsa-utils
+    swaybg
   ];
 
   home.file = {};

@@ -9,7 +9,7 @@
      size = 12;
    };
   
-   themeFile = "./Themes/gruvbox-dark.conf";
+   themeFile = "gruvbox-dark";
   
    settings = {
      cursor_shape = "beam";
