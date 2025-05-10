@@ -25,6 +25,7 @@
     brightnessctl
     alsa-utils
     swww
+    tmux
   ];
 
   home.file = {};
