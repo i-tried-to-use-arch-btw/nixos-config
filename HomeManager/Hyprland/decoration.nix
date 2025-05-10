@@ -5,6 +5,7 @@
     settings = {
       decoration = {
         rounding = 10;
+
         blur = {
           enabled = true;
           xray = true;
@@ -16,7 +17,13 @@
           noise = 0.01;
           contrast = 1;
           popups = true;
-          popups_ignorealpha = 0.6;
+        };
+        shadow = {
+          enabled = true;
+          range = 10;
+          render_power = 3;
+          color = "0xee1a1a1a";
+          scale = 1.0;
         };
       };
     };
