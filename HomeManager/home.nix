@@ -27,6 +27,7 @@
     swww
     tmux
     inputs.ags.packages.${pkgs.system}.default
+    inputs.astal.packages.${pkgs.system}.default
   ];
 
   home.file = {};
