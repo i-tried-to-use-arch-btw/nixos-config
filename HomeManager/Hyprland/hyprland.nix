@@ -82,6 +82,7 @@
     ./trash.nix
     ./windowrules.nix
     ./decoration.nix
+    ./general.nix
   ];
 }
 
