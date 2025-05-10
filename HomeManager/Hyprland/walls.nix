@@ -1,10 +1,15 @@
 { config, pkgs, ... }:
 
+let
+wall = builtins.toPath ../../Walls/space.png;
+in
+
 {
   wayland.windowManager.hyprland = {
     settings = {
       exec-once = [
-        "swaybg -i /home/me/nixos-config/Walls/space.png -m fill"
+        "swww-daemon"
+        "swww img ${wall}" 
         "hyprctl setcursor Adwaita 24"
       ];
     };

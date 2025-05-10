@@ -81,7 +81,7 @@
     ./walls.nix
     ./trash.nix
     ./windowrules.nix
-    ./blur.nix
+    ./decoration.nix
   ];
 }
 

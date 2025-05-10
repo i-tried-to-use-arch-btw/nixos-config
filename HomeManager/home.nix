@@ -24,7 +24,7 @@
     nerd-fonts.jetbrains-mono
     brightnessctl
     alsa-utils
-    swaybg
+    swww
   ];
 
   home.file = {};
