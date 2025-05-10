@@ -1,4 +1,4 @@
-{ pkg, lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   programs.kitty = {
@@ -10,13 +10,12 @@
     };
   
     themeFile = "gruvbox-dark";
-     
+
     settings = {
       cursor_shape = "beam";
       enable_audio_bell = false;
       scrollback_lines = 5000;
       confirm_os_window_close = 0;
-      opacity = "0";
     };
   };
 }
