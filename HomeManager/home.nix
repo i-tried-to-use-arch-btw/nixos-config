@@ -14,6 +14,7 @@
     ./zsh.nix
     ./NeoVim/config/default.nix
     ./kitty.nix
+    ./tmux.nix
     nixvim.homeManagerModules.nixvim
   ];
 
