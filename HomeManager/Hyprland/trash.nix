@@ -7,6 +7,7 @@
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
       ];
+      exec-once = "hyprctl setcursor Adwaita 24";
     };
   };
 }
