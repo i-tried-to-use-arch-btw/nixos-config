@@ -81,6 +81,7 @@
     ./walls.nix
     ./trash.nix
     ./windowrules.nix
+    ./blur.nix
   ];
 }
 
