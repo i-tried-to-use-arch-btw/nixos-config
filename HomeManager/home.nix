@@ -26,6 +26,7 @@
     alsa-utils
     swww
     tmux
+    ags
   ];
 
   home.file = {};
