@@ -8,6 +8,7 @@
       home-update = "home-manager switch --flake /home/me/nixos-config/HomeManager#me";
       tmux = "tmux -u";
       u = "fzf";
+      ags = "nix shell github:aylur/ags";
     };
     oh-my-zsh = {
        enable = true;
