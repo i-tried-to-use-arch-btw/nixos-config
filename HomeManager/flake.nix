@@ -13,25 +13,19 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ags.url = "github:aylur/ags";
-    ags.inputs.nixpkgs.follows = "nixpkgs";
-    astal.url = "github:Aylur/astal";
-    astal.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }@inputs:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."me" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-
-        modules = [
-          ./home.nix
-        ];
-
-        extraSpecialArgs = { inherit nixvim inputs; }; # make nixvim available in home.nix
+        modules = [ ./home.nix ];
+        extraSpecialArgs = {
+          inherit nixvim inputs;
+        };
       };
     };
 }
