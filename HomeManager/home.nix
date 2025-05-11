@@ -1,5 +1,8 @@
 { config, pkgs, nixvim, inputs, ... }:
 
+let
+  system = "x86_64-linux";
+in
 {
   home.username = "me";
   home.homeDirectory = "/home/me";
@@ -26,7 +29,7 @@
     alsa-utils
     swww
     tmux
-    ags
+    inputs.quickshell.packages.${system}.default
   ];
 
   home.file = {};

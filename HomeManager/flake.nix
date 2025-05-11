@@ -13,9 +13,17 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+
+      # THIS IS IMPORTANT
+      # Mismatched system dependencies will lead to crashes and other issues.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }: 
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, quickshell, ... }: 
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -24,7 +32,7 @@
         inherit pkgs;
         modules = [ ./home.nix ];
         extraSpecialArgs = {
-          inherit nixvim inputs;
+          inherit nixvim inputs quickshell;
         };
       };
     };
