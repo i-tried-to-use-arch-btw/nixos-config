@@ -29,7 +29,6 @@ in
     alsa-utils
     swww
     tmux
-    inputs.quickshell.packages.${system}.default
   ];
 
   home.file = {};

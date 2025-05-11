@@ -1,6 +1,6 @@
 # apps.nix
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # List packages installed in system profile. To search, run:
@@ -15,6 +15,7 @@
      zsh
      home-manager
      tree
+     inputs.quickshell.packages.x86_64-linux.default
   ];
   # Install firefox.
   programs.firefox.enable = true;
