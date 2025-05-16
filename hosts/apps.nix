@@ -15,7 +15,6 @@
      zsh
      home-manager
      tree
-     inputs.quickshell.packages.x86_64-linux.default
   ];
   # Install firefox.
   programs.firefox.enable = true;
