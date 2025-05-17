@@ -37,6 +37,7 @@
 
       astalLibs = with astal.packages.${system}; [
         astal3
+        hyprland
         io
       ];
 
