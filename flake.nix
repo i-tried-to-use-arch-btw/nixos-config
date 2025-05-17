@@ -18,7 +18,7 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/configuration.nix
+          ./hosts/main/configuration.nix
         ];
       };
     };

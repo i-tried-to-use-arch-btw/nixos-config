@@ -4,14 +4,17 @@
 
 { config, pkgs, inputs, ... }:
 
+let
+  path = builtins.toPath;
+in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      path ../../NixosModules/hardware-configuration.nix
       # Seperate Apps file
-      ./apps.nix
+      path ../../NixosModules/apps.nix
       # Enabling Hyprland
-      ./hyprland.nix
+      path ../../NixosModules/hyprland.nix
     ];
 
   # Bootloader.
