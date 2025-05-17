@@ -25,30 +25,24 @@
       url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    myflake.url = "./ags";
   };
 
-  outputs = inputs@{ self, nixpkgs, hyprland, home-manager, nixvim, astal, ags, ... }:
+  outputs = inputs@{ self, nixpkgs, hyprland, home-manager, nixvim, astal, ags, myflake, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
-
-      astalLibs = with astal.packages.${system}; [
-        astal3
-        hyprland
-        io
-      ];
-
-      typelibPaths = pkgs.lib.makeSearchPath "lib/girepository-1.0" astalLibs;
-
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/main/configuration.nix
+          myflake.nixosModules.default
         ];
       };
 
@@ -58,44 +52,6 @@
         extraSpecialArgs = {
           inherit nixvim inputs;
         };
-      };
-
-      packages.${system}.default = pkgs.stdenvNoCC.mkDerivation rec {
-        pname = "my-shell";
-        version = "1.0";
-        src = ./.;
-
-        nativeBuildInputs = [
-          pkgs.nodejs
-          pkgs.wrapGAppsHook
-          pkgs.gobject-introspection
-          ags.packages.${system}.default
-        ];
-
-        buildInputs = astalLibs;
-
-        installPhase = ''
-          mkdir -p $out/bin
-          ags bundle app.ts $out/bin/${pname}
-        '';
-
-        dontWrapGApps = true;
-        fixupPhase = ''
-          makeWrapper $out/bin/${pname} $out/bin/${pname} \
-            --set GI_TYPELIB_PATH ${typelibPaths}
-        '';
-      };
-
-      devShells.${system}.default = pkgs.mkShell {
-        buildInputs = [
-          pkgs.gjs
-          ags.packages.${system}.default
-          pkgs.nodejs
-        ] ++ astalLibs;
-
-        shellHook = ''
-          export GI_TYPELIB_PATH=${typelibPaths}
-        '';
       };
     };
 }
