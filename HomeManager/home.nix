@@ -16,7 +16,7 @@ in
     ./Hyprland/hyprland.nix
     ./git.nix
     ./zsh.nix
-    ./NeoVim/config/default.nix
+    ../NeoVim/config/default.nix
     ./kitty.nix
     ./tmux.nix
     nixvim.homeManagerModules.nixvim
