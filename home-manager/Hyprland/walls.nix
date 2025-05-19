@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-wall = builtins.toPath ../../nonHomeManagerStuff/Walls/space.png;
+wall = ../../nonHomeManagerStuff/Walls/space.png;
 in
 
 {
