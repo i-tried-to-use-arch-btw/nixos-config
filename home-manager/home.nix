@@ -18,6 +18,7 @@ in
     ./ags.nix
     ./starship.nix
     ./nvim.nix
+    ./minecraft.nix
   ];
 
   fonts.fontconfig.enable = true;
