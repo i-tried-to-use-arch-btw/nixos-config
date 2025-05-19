@@ -11,7 +11,7 @@
     servers = {
       survival = {
         enable = true;
-        package = pkgs.vanillaServers.vanilla-1_21_5
+        package = pkgs.vanillaServers.vanilla-1_21_5;
 
         serverProperties = {
           gamemode = "survival";
