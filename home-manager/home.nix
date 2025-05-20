@@ -17,6 +17,7 @@ in
     ./tmux.nix
     ./ags.nix
     ./starship.nix
+    ./symlinks.nix
   ];
 
   fonts.fontconfig.enable = true;
