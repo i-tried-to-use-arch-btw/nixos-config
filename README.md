@@ -129,4 +129,9 @@ To use this NixOS configuration for your own system:
 
 ---
 
-*Auto-generated draft; update as your configuration evolves!*
+Also I recommend you to keep the dotfiles in your user's home directory because there are some absolute paths in this.
+
+# Thanks
+
+- @aylur's dotfiles for tmux/starship
+- @end-4's dotfiles for fuzzel
