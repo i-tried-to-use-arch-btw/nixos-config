@@ -14,6 +14,7 @@
       a = "ls";
       ao = "ls -a";
       vim = "nvim";
+      hyprset = "hyprctl keyword";
     };
 
     oh-my-zsh = {
