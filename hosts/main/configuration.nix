@@ -13,7 +13,7 @@ in
       # Seperate Apps file
       ../../NixosModules/apps.nix
       # Enabling Hyprland
-      ../../NixosModules/hyprland.nix
+      # ../../NixosModules/hyprland.nix
       # Minecraft
       ../../NixosModules/minecraft.nix
     ];
