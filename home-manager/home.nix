@@ -45,6 +45,8 @@ in
     wl-clipboard
     btop
     hyprlock
+    unzip
+    nodejs
   ];
 
   home.file = {};
