@@ -43,6 +43,7 @@ in
     cliphist
     fuzzel
     wl-clipboard
+    btop
   ];
 
   home.file = {};
