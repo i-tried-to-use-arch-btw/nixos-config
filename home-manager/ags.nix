@@ -6,6 +6,8 @@ in
 {
   imports = [ inputs.ags.homeManagerModules.default ];
 
+  configDir = ../ags;
+
   programs.ags = {
     enable = true;
     extraPackages = with pkgs; [
