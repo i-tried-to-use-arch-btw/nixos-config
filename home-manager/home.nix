@@ -36,6 +36,7 @@ in
     neofetch
     uwufetch
     neovim
+    gcc
   ];
 
   home.file = {};
