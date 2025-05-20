@@ -65,22 +65,10 @@ in
         format = "[$symbol ](yellow dimmed)";
       };
       directory = {
-        format = " [${pad.left}](fg:black)[$path](bg:black fg:white)[${pad.right}](fg:black)";
+        format = " [${pad.left}](fg:#3a3a3a)[$path](bg:#3a3a3a fg:white)[${pad.right}](fg:#3a3a3a)";
         truncation_length = 6;
         truncation_symbol = "~/󰇘/";
       };
-      # directory.substitutions = {
-      #   "Documents" = "󰈙 ";
-      #   "Downloads" = " ";
-      #   "Music" = " ";
-      #   "Pictures" = " ";
-      #   "Videos" = " ";
-      #   "Projects" = "󱌢 ";
-      #   "School" = "󰑴 ";
-      #   "GitHub" = "";
-      #   ".config" = " ";
-      #   "Vault" = "󱉽 ";
-      # };
       git_branch = {
         symbol = "";
         style = "";
@@ -110,3 +98,4 @@ in
     };
   };
 }
+

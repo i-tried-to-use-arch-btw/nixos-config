@@ -37,6 +37,7 @@ in
     uwufetch
     neovim
     gcc
+    hyprpicker
   ];
 
   home.file = {};

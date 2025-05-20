@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  bg  = "#1C1C1C";
+  bg  = "#161616";
   fg  = "#FFFFFF";
   bg2 = "#2A2A2A";
   fg2 = "#FAFAFA";
@@ -14,7 +14,7 @@ let
   accent6 = "#6FEAFF"; # Cyan
 
   currentWindow = let
-    index = "#[reverse,fg=${accent3},bg=${fg}] #I ";
+    index = "#[reverse,fg=${accent1},bg=${fg}] #I ";
     name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 

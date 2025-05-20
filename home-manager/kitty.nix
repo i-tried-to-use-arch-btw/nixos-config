@@ -19,7 +19,7 @@
     };
 
     extraConfig = ''
-      background #1C1C1C
+      background #161616
       foreground #DFDFDF
       cursor     #DFDFDF
 
