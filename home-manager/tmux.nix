@@ -19,7 +19,7 @@ let
   in "${index}${name}";
 
   windowStatus = let
-    index = "#[reverse,fg=${accent5},bg=${fg}] #I ";
+    index = "#[reverse,fg=${accent3},bg=${fg}] #I ";
     name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
