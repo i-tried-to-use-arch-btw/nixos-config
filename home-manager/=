@@ -19,7 +19,7 @@ let
   in "${index}${name}";
 
   windowStatus = let
-    index = "#[reverse,fg=${accent4},bg=${fg}] #I ";
+    index = "#[reverse,fg=${accent6},bg=${fg}] #I ";
     name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
@@ -42,9 +42,9 @@ let
         11|23) echo "󱑕" ;;
       esac
     '';
-  in "#[reverse,fg=${accent1}] ${format} #(${icon}) ";
+  in "#[reverse,fg=${accent5}] ${format} #(${icon}) ";
 
-  pwd = "#[fg=${accent1}] #[fg=${fg}]#{b:pane_current_path}";
+  pwd = "#[fg=${accent3}] #[fg=${fg}]#{b:pane_current_path}";
 
   git = let
     icon = pkgs.writeShellScript "branchIcon" ''
