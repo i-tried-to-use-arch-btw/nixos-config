@@ -5,7 +5,7 @@
     settings = {
       decoration = {
         rounding = 10;
-        inactive_opacity = 0.8;
+        inactive_opacity = 0.95;
 
         blur = {
           enabled = true;
