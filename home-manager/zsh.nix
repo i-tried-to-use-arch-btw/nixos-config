@@ -13,6 +13,7 @@
       "ags-init" = "ags init --gtk 4";
       a = "ls";
       ao = "ls -a";
+      vim = "nvim";
     };
 
     oh-my-zsh = {
