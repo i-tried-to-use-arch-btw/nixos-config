@@ -36,6 +36,7 @@ in
     fastfetch
     neofetch
     uwufetch
+    lunar-client
   ];
 
   home.file = {};
