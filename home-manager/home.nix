@@ -41,6 +41,7 @@ in
     hyprshot
     cliphist
     fuzzel
+    wl-clipboard
   ];
 
   home.file = {};

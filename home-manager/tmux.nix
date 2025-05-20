@@ -14,12 +14,12 @@ let
   accent6 = "#6FEAFF"; # Cyan
 
   currentWindow = let
-    index = "#[reverse,fg=${accent1},bg=${fg}] #I ";
+    index = "#[reverse,fg=${accent4},bg=${fg}] #I ";
     name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
   windowStatus = let
-    index = "#[reverse,fg=${accent4},bg=${fg}] #I ";
+    index = "#[reverse,fg=${accent6},bg=${fg}] #I ";
     name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
@@ -42,9 +42,9 @@ let
         11|23) echo "󱑕" ;;
       esac
     '';
-  in "#[reverse,fg=${accent1}] ${format} #(${icon}) ";
+  in "#[reverse,fg=${accent4}] ${format} #(${icon}) ";
 
-  pwd = "#[fg=${accent1}] #[fg=${fg}]#{b:pane_current_path}";
+  pwd = "#[fg=${accent4}] #[fg=${fg}]#{b:pane_current_path}";
 
   git = let
     icon = pkgs.writeShellScript "branchIcon" ''
@@ -53,7 +53,7 @@ let
     branch = pkgs.writeShellScript "branchName" ''
       git -C "$1" rev-parse --abbrev-ref HEAD 2>/dev/null
     '';
-  in "#[fg=${accent1}]#(${icon} #{pane_current_path})#(${branch} #{pane_current_path})";
+  in "#[fg=${accent4}]#(${icon} #{pane_current_path})#(${branch} #{pane_current_path})";
 
   separator = "#[fg=${fg}]|";
 
