@@ -17,6 +17,9 @@
         "$mainMod, W, exec, wofi --show drun"
         "$mainMod, Q, killactive"
 
+        # Launch clipborad
+        "$mainMod, V, exec, cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
+
         # Brightness
         "ALT, F2, exec, brightnessctl s 5%-"
         "ALT, F3, exec, brightnessctl s 5%+"
