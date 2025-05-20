@@ -17,7 +17,6 @@ in
     ./tmux.nix
     ./ags.nix
     ./starship.nix
-    ./nvim.nix
   ];
 
   fonts.fontconfig.enable = true;
@@ -36,7 +35,7 @@ in
     fastfetch
     neofetch
     uwufetch
-    lunar-client
+    neovim
   ];
 
   home.file = {};
