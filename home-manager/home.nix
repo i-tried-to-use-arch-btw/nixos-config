@@ -40,6 +40,7 @@ in
     hyprpicker
     hyprshot
     cliphist
+    fuzzel
   ];
 
   home.file = {};
