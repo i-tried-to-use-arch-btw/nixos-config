@@ -11,8 +11,8 @@ in
         "swww-daemon"
         "swww img ${wall}" 
         "hyprctl setcursor Adwaita 24"
-        "wl-paste --watch --type text cliphist store &"
-        "wl-paste --watch --type image cliphist store &"
+        "wl-paste --watch cliphist store --type text &"
+        "wl-paste --watch cliphist store --type image&"
       ];
     };
   };
