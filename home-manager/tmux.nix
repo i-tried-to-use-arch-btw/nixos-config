@@ -1,19 +1,26 @@
 { pkgs, ... }:
 
 let
-  bg = "#282828";
-  fg = "#ebdbb2";
-  bg2 = "#3c3836";
-  fg2 = "#fbf1c7";
+  bg  = "#1C1C1C";
+  fg  = "#FFFFFF";
+  bg2 = "#2A2A2A";
+  fg2 = "#FAFAFA";
+
+  accent1 = "#FF8888"; # Red
+  accent2 = "#AEE75D"; # Green
+  accent3 = "#FFCC55"; # Yellow
+  accent4 = "#68C9FF"; # Blue
+  accent5 = "#E295FF"; # Magenta
+  accent6 = "#6FEAFF"; # Cyan
 
   currentWindow = let
-    index = "#[reverse,fg=#d79921,bg=${fg}] #I ";
-    name = "#[fg=${bg2},bg=${fg2}] #W ";
+    index = "#[reverse,fg=${accent3},bg=${fg}] #I ";
+    name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
   windowStatus = let
-    index = "#[reverse,fg=#83a598,bg=${fg}] #I ";
-    name = "#[fg=${bg2},bg=${fg2}] #W ";
+    index = "#[reverse,fg=${accent4},bg=${fg}] #I ";
+    name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
   time = let
@@ -35,9 +42,9 @@ let
         11|23) echo "󱑕" ;;
       esac
     '';
-  in "#[reverse,fg=#b8bb26] ${format} #(${icon}) ";
+  in "#[reverse,fg=${accent4}] ${format} #(${icon}) ";
 
-  pwd = "#[fg=#fabd2f] #[fg=${fg}]#{b:pane_current_path}";
+  pwd = "#[fg=${accent3}] #[fg=${fg}]#{b:pane_current_path}";
 
   git = let
     icon = pkgs.writeShellScript "branchIcon" ''
@@ -46,7 +53,7 @@ let
     branch = pkgs.writeShellScript "branchName" ''
       git -C "$1" rev-parse --abbrev-ref HEAD 2>/dev/null
     '';
-  in "#[fg=#d3869b]#(${icon} #{pane_current_path})#(${branch} #{pane_current_path})";
+  in "#[fg=${accent5}]#(${icon} #{pane_current_path})#(${branch} #{pane_current_path})";
 
   separator = "#[fg=${fg}]|";
 
@@ -57,18 +64,30 @@ in {
       vim-tmux-navigator
       yank
     ];
+
     baseIndex = 1;
     escapeTime = 0;
     keyMode = "vi";
     mouse = true;
+    terminal = "screen-256color";
+
     extraConfig = ''
       set-option -sa terminal-overrides ",xterm*:Tc"
       set-option -g default-terminal "screen-256color"
-      set-option -g status-right-length 100
-      set-option -g pane-active-border fg=#fe8019
-      set-option -g pane-border-style fg=#504945
+
+      # Prefix key to Alt + a
+      set-option -g prefix M-a
+      unbind-key C-b
+      bind-key M-a send-prefix
+
+      # Brighter Carbonfox-style
+      set-option -g pane-active-border fg=${accent3}
+      set-option -g pane-border-style fg=#444444
       set-option -g status-style "bg=${bg} fg=${fg}"
+
+      # Statusline layout
       set-option -g status-left-length 0
+      set-option -g status-right-length 100
       set-option -g status-right "${git} ${pwd} ${separator} ${time}"
       set-option -g window-status-current-format "${currentWindow}"
       set-option -g window-status-format "${windowStatus}"
