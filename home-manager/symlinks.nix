@@ -1,11 +1,15 @@
 { config, pkgs, ... }:
 
 let
-  sourcePath = ../nonHomeManagerStuff/fuzzel/fuzzel.ini;
+  fuzzel = ../nonHomeManagerStuff/fuzzel/fuzzel.ini;
+  hyprlock = ./Hyprland/hyprlock.conf;
 in
 {
   home.file.".config/fuzzel/fuzzel.ini" = {
-    source = "${sourcePath}";
+    source = "${fuzzel}";
+  };
+  home.file.".config/hypr/hyprlock.conf" = {
+    source = "${hyprlock}";
   };
 }
 

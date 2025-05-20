@@ -44,6 +44,7 @@ in
     fuzzel
     wl-clipboard
     btop
+    hyprlock
   ];
 
   home.file = {};

@@ -16,6 +16,11 @@
         "$mainMod, Y, exec, kitty"
         "$mainMod, W, exec, wofi --show drun"
         "$mainMod, Q, killactive"
+        
+        # Hyprland stuff
+        "$mainMod, M, exec, hyprctl dispatch exit"
+        "$mainMod, L, exec, hyprlock"
+
 
         # Launch clipborad
         "$mainMod, V, exec, cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
