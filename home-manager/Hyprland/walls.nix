@@ -11,6 +11,8 @@ in
         "swww-daemon"
         "swww img ${wall}" 
         "hyprctl setcursor Adwaita 24"
+        "wl-paste --type text"
+        "wl-paste --type image"
       ];
     };
   };
