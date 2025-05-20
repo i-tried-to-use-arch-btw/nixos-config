@@ -8,9 +8,9 @@
 
         animation = [
           "workspaces, 1, 5, workspaceChange, slide"
-          "windowsIn, 1, 2, windowStart, popin 60%"
-          "windowsOut, 1, 2, windowKill"
-          "windowsMove, 1, 2, windowChange, popin 20%"
+          "windowsIn, 1, 2, windowStart"
+          "windowsOut, 1, 2, windowKill, popin 80%"
+          "windowsMove, 1, 2, windowStart"
         ];
 
         bezier = [
