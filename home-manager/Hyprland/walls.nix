@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-wall = ../../nonHomeManagerStuff/adwaita-dark.webp;
+wall = ../../nonHomeManagerStuff/Walls/adwaita-dark.webp;
 in
 
 {
