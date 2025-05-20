@@ -15,7 +15,7 @@ in
       # Enabling Hyprland
       # ../../NixosModules/hyprland.nix
       # Minecraft
-      ../../NixosModules/minecraft.nix
+      # ../../NixosModules/minecraft.nix
     ];
 
   # Bootloader.
