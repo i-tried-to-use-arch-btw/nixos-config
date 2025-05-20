@@ -38,6 +38,8 @@ in
     neovim
     gcc
     hyprpicker
+    hyprshot
+    cliphist
   ];
 
   home.file = {};
