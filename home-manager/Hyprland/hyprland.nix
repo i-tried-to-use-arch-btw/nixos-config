@@ -89,6 +89,7 @@
     ./windowrules.nix
     ./decoration.nix
     ./general.nix
+    ./animation.nix
   ];
 }
 
