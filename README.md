@@ -2,6 +2,34 @@
 
 This repository contains the NixOS system and user configuration for your setup, leveraging flakes, Home Manager, and modular Nix expressions.
 
+## Getting Started & Customization
+
+To use this NixOS configuration for your own system:
+
+1. **Username and Hostname:**
+   - Change all instances of `me` (user) and `nixos` (hostname) to your preferred username and hostname.
+     - System username appears in `hosts/main/configuration.nix` and `home-manager/home.nix`.
+     - Hostname is set in `hosts/main/configuration.nix`.
+
+2. **Hardware Configuration:**
+   - Copy your machine's generated `hardware-configuration.nix` (from `/etc/nixos/hardware-configuration.nix` after installation) into `NixosModules/hardware-configuration.nix`, replacing the existing file.
+
+3. **Enabling Minecraft Module & Server:**
+   - This setup includes a Minecraft server module.
+   - To enable it, simply uncomment the relevant lines in:
+     - `hosts/main/configuration.nix` for the server and
+     - Any referenced module for Minecraft in `NixosModules/`.
+   - Follow the comments in the config files—uncommenting the correct lines will activate the module/server.
+
+4. **Other Customizations:**
+   - Review other modules you want to enable (e.g., Hyprland) and uncomment their imports as needed.
+   - Update any other paths or settings to suit your hardware and preferences.
+
+**After making these changes, you can build and switch to your new configuration.**
+
+---
+
+
 ## Repository Structure
 
 - `.gitignore` – Standard file to ignore untracked files in Git.
