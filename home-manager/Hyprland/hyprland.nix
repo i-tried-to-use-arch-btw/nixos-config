@@ -21,7 +21,7 @@
         "$mainMod, V, exec, cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
 
         # Color colorpicker
-        "$mainMod, P, exec, hyprshot -a"
+        "$mainMod, P, exec, hyprpicker -a"
 
         # Brightness
         "ALT, F2, exec, brightnessctl s 5%-"
