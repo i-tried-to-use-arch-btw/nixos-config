@@ -10,7 +10,7 @@ let
   accent2 = "#AEE75D"; # Green
   accent3 = "#FFCC55"; # Yellow
   accent4 = "#68C9FF"; # Blue
-  accent5 = "#E295FF"; # Magenta
+  accent5 = "#FF00FF"; # Magenta
   accent6 = "#6FEAFF"; # Cyan
 
   currentWindow = let
@@ -19,7 +19,7 @@ let
   in "${index}${name}";
 
   windowStatus = let
-    index = "#[reverse,fg=${accent6},bg=${fg}] #I ";
+    index = "#[reverse,fg=${accent5},bg=${fg}] #I ";
     name  = "#[fg=${bg2},bg=${fg2}] #W ";
   in "${index}${name}";
 
