@@ -49,6 +49,7 @@ in
     nodejs
     brave
     wofi
+    libnotify
   ];
 
   home.file = {};
