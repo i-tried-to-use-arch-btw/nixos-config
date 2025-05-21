@@ -48,6 +48,7 @@ in
     unzip
     nodejs
     brave
+    wofi
   ];
 
   home.file = {};

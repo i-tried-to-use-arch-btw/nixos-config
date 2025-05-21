@@ -9,7 +9,7 @@ in
 {
   imports =
     [ # Include the results of the hardware scan.
-      ../../NixosModules/hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
       # Seperate Apps file
       ../../NixosModules/apps.nix
       # Enabling Hyprland

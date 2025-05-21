@@ -25,8 +25,6 @@
     hyprpaper
     # Hyprpicker
     hyprpicker
-    # Wofi the app launcher
-    wofi
     # The terminal emulator
     kitty
   ];

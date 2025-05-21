@@ -21,7 +21,6 @@
         "$mainMod, M, exec, hyprctl dispatch exit"
         "$mainMod, L, exec, hyprlock"
 
-
         # Launch clipborad
         "$mainMod, V, exec, cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
 
