@@ -47,6 +47,7 @@ in
     hyprlock
     unzip
     nodejs
+    brave
   ];
 
   home.file = {};
