@@ -13,9 +13,7 @@ in
       # Seperate Apps file
       ../../NixosModules/apps.nix
       # Enabling Hyprland
-      # ../../NixosModules/hyprland.nix
-      # Minecraft
-      # ../../NixosModules/minecraft.nix
+      ../../NixosModules/hyprland.nix
     ];
 
   # Bootloader.

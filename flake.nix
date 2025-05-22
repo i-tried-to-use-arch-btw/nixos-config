@@ -16,7 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
   outputs = inputs@{ self, nixpkgs, hyprland, home-manager, ags, ... }:
