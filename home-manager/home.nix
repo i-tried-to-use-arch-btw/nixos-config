@@ -19,12 +19,17 @@ in
     ./symlinks.nix
   ];
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra; # Needed for Adwaita-dark
+    };
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
     };
   };
-  gtk.enable = true;
 
   fonts.fontconfig.enable = true;
 
