@@ -15,30 +15,30 @@
       url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = inputs@{ self, nixpkgs, hyprland, home-manager, ags, ... }:
     let
+      username = "nurlyx";
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
       };
     in {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."main" = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs username; };
         modules = [
           ./hosts/main/configuration.nix
         ];
       };
 
-      homeConfigurations."me" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."${username}" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home-manager/home.nix ];
         extraSpecialArgs = {
-          inherit inputs;
+          inherit inputs username;
         };
       };
     };
