@@ -10,8 +10,6 @@
       /etc/nixos/hardware-configuration.nix
       # Seperate Apps file
       ../../NixosModules/apps.nix
-      # Enabling Hyprland
-      ../../NixosModules/hyprland.nix
     ];
 
   # Bootloader.
