@@ -1,12 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, username, ... }:
+
 {
   programs.zsh = {
     # Allow Home manager to manage Zsh
     enable = true;
     enableCompletion = true;
     shellAliases = {
-      update = "sudo nixos-rebuild switch --flake /home/me/nixos-config/hosts#nixos";
-      home-update = "home-manager switch --flake /home/me/nixos-config/#me";
+      update = "sudo nixos-rebuild switch --flake /home/${username}/nixos-config/hosts#main";
+      home-update = "home-manager switch --flake /home/${username}/nixos-config/#me";
       tmux = "tmux -u";
       u = "fzf";
       "ags-run" = "ags run --gtk4";

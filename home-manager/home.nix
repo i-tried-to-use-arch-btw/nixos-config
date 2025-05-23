@@ -1,11 +1,11 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, username, ... }:
 
 let
   system = "x86_64-linux";
 in
 {
-  home.username = "me";
-  home.homeDirectory = "/home/me";
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
   
   # Imports
 
