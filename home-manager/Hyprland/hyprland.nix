@@ -14,7 +14,7 @@
       bind = [
         # Launch applications
         "$mainMod, Y, exec, kitty"
-        "$mainMod, W, exec, wofi --show drun"
+        "$mainMod, W, exec, ags toggle launcher"
         "$mainMod, Q, killactive"
         
         # Hyprland stuff

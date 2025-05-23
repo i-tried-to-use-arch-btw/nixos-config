@@ -13,6 +13,7 @@ in
         "hyprctl setcursor Adwaita 24"
         "wl-paste --watch cliphist store --type text &"
         "wl-paste --watch cliphist store --type image&"
+        "ags run&"
       ];
     };
   };
