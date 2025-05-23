@@ -94,6 +94,7 @@
     ./decoration.nix
     ./general.nix
     ./animation.nix
+    ./plugins.nix
   ];
 }
 
