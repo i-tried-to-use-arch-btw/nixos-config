@@ -10,6 +10,7 @@
     };
 
     settings = {
+      shell = "tmux -u";
       cursor_shape = "beam";
       enable_audio_bell = false;
       scrollback_lines = 5000;
