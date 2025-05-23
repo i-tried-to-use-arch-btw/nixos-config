@@ -11,7 +11,6 @@ in
 
   imports = [
     ./Hyprland/hyprland.nix
-    ./git.nix
     ./zsh.nix
     ./kitty.nix
     ./tmux.nix
