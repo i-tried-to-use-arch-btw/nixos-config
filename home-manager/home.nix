@@ -24,6 +24,7 @@ in
       color-scheme = "prefer-dark";
     };
   };
+  gtk.enable = true;
 
   fonts.fontconfig.enable = true;
 
