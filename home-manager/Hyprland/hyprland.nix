@@ -95,6 +95,7 @@
     ./general.nix
     ./animation.nix
     ./plugins.nix
+    ./hy3.nix
   ];
 }
 

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  bg  = "#161616";
+  bg  = "#171718";
   fg  = "#FFFFFF";
   bg2 = "#2A2A2A";
   fg2 = "#FAFAFA";
