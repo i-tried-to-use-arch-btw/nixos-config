@@ -17,7 +17,7 @@ function OnScreenProgress({ visible }: { visible: Variable<boolean> }) {
     value.set(v)
     iconName.set(icon)
     count++
-    timeout(2000, () => {
+    timeout(500, () => {
       count--
       if (count === 0) visible.set(false)
     })
@@ -37,14 +37,16 @@ function OnScreenProgress({ visible }: { visible: Variable<boolean> }) {
         }
       }}
       revealChild={visible()}
-      transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
+      transitionType={Gtk.RevealerTransitionType.SLIDE_RIGHT}
     >
-      <box className="OSD">
+      <box
+        className="OSD"
+        orientation={1}>
         <icon icon={iconName()} />
         <levelbar valign={Gtk.Align.CENTER} widthRequest={100} value={value()} />
         <label label={value(v => `${Math.floor(v * 100)}%`)} />
       </box>
-    </revealer>
+    </revealer >
   )
 }
 
@@ -59,8 +61,7 @@ export default function OSD(monitor: Gdk.Monitor) {
       application={App}
       layer={Astal.Layer.OVERLAY}
       keymode={Astal.Keymode.ON_DEMAND}
-      anchor={Astal.WindowAnchor.BOTTOM}
-    >
+      anchor={Astal.WindowAnchor.RIGHT}>
       <eventbox onClick={() => visible.set(false)}>
         <OnScreenProgress visible={visible} />
       </eventbox>
