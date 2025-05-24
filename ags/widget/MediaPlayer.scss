@@ -9,6 +9,7 @@ window {
 box.MediaPlayer {
   padding: .6rem;
   background-color: $bg-color;
+  border-radius: 20px;
 
   box.cover-art {
     min-width: 120px;
@@ -20,26 +21,33 @@ box.MediaPlayer {
   }
 
   box.title {
+    border: none;
+
     label {
       font-weight: bold;
       font-size: 1.1em;
+      border: none;
     }
   }
 
   scale {
     padding: 0;
     margin: .4rem 0;
+    border: none;
 
     trough {
       min-height: 8px;
+      border: none;
     }
 
     highlight {
       background-color: $fg-color;
+      border: none;
     }
 
     slider {
       all: unset;
+      border: none;
     }
   }
 
