@@ -7,7 +7,7 @@
     enableCompletion = true;
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake /home/${username}/nixos-config/hosts#main";
-      home-update = "home-manager switch --flake /home/${username}/nixos-config/#me";
+      home-update = "home-manager switch --flake /home/${username}/nixos-config/#${username}";
       tmux = "tmux -u";
       u = "fzf";
       "ags-run" = "ags run --gtk4";

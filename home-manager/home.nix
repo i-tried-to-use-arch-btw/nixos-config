@@ -61,6 +61,7 @@ in
     brave
     wofi
     libnotify
+    inputs.quickshell.packages.${system}.default
   ];
 
   home.file = {};
