@@ -17,6 +17,7 @@
         "$mainMod, W, exec, ags toggle launcher"
         "$mainMod, Q, killactive"
         "$mainMod + CTRL, M, exec, ags toggle MediaPlayer"
+        "$mainMod + Shift, S, exec, hyprshot -m region"
         
         # Hyprland stuff
         "$mainMod, M, exec, hyprctl dispatch exit"
