@@ -14,6 +14,7 @@ in
         "wl-paste --watch cliphist store --type text &"
         "wl-paste --watch cliphist store --type image&"
         "ags run&"
+        "qs -p ../../nonHomeManagerStuff/activate_linux/"
       ];
     };
   };
