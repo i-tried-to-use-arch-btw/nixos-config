@@ -37,11 +37,10 @@ function OnScreenProgress({ visible }: { visible: Variable<boolean> }) {
         }
       }}
       revealChild={visible()}
-      transitionType={Gtk.RevealerTransitionType.SLIDE_RIGHT}
+      transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
     >
       <box
-        className="OSD"
-        orientation={1}>
+        className="OSD">
         <icon icon={iconName()} />
         <levelbar valign={Gtk.Align.CENTER} widthRequest={100} value={value()} />
         <label label={value(v => `${Math.floor(v * 100)}%`)} />
@@ -61,7 +60,7 @@ export default function OSD(monitor: Gdk.Monitor) {
       application={App}
       layer={Astal.Layer.OVERLAY}
       keymode={Astal.Keymode.ON_DEMAND}
-      anchor={Astal.WindowAnchor.RIGHT}>
+      anchor={Astal.WindowAnchor.TOP}>
       <eventbox onClick={() => visible.set(false)}>
         <OnScreenProgress visible={visible} />
       </eventbox>

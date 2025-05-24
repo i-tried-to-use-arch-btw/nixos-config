@@ -13,6 +13,6 @@ App.start({
     Applauncher()
     App.get_monitors().map(NotificationPopups)
     App.get_monitors().map(OSD)
-    new Widget.Window({}, MprisPlayers())
+    // new Widget.Window({}, MprisPlayers())
   },
 })
